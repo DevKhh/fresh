@@ -1,31 +1,99 @@
 ---
+title: Arcana
 layout: default
 ---
+			
+<!-- Banner -->
+	<section id="banner">
+		<header>
+			<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
+			<a href="#" class="button">Learn More</a>
+		</header>
+	</section>
 
-{% for post in paginator.posts %}
-<article class="main-article">
-  <div class="wrap-content">
-    <header class="header-article">
-      <h2 class="title-article"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-      <div class="post-date"><span>{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-    </header>
-    {% if post.img %}
-       <img class="post-image" src={{ "/assets/img/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
-    {% endif %}
-    <p>{{post.description}} <a class="more" href="{{post.url | prepend: site.baseurl}}">(Read more...)</a></p>
-  </div>
-</article>
-{% endfor %}
+<!-- Highlights -->
+	<section class="wrapper style1">
+		<div class="container">
+			<div class="row double">
+				<section class="4u">
+					<div class="box highlight">
+						<i class="icon major fa-paper-plane"></i>
+						<h3>This Is Important</h3>
+						<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+					</div>
+				</section>
+				<section class="4u">
+					<div class="box highlight">
+						<i class="icon major fa-pencil"></i>
+						<h3>Also Important</h3>
+						<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+					</div>
+				</section>
+				<section class="4u">
+					<div class="box highlight">
+						<i class="icon major fa-wrench"></i>
+						<h3>Probably Important</h3>
+						<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</a>
-  {% else %}
-    <span class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</span>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-  {% else %}
-    <span class="next ">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-  {% endif %}
-</div>
+<!-- Gigantic Heading -->
+	<section class="wrapper style2">
+		<div class="container">
+			<header class="major">
+				<h2>A gigantic heading you can use for whatever</h2>
+				<p>With a much smaller subtitle hanging out just below it</p>
+			</header>
+		</div>
+	</section>
+
+<!-- Posts -->
+	<section class="wrapper style1">
+		<div class="container">
+			<div class="row">
+				<section class="6u">
+					<div class="box post">
+						<a href="#" class="image left"><img src="{{ site.baseurl }}/assets/images/pic01.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>The First Thing</h3>
+							<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+						</div>
+					</div>
+				</section>
+				<section class="6u">
+					<div class="box post">
+						<a href="#" class="image left"><img src="{{ site.baseurl }}/assets/images/pic02.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>The Second Thing</h3>
+							<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="row">
+				<section class="6u">
+					<div class="box post">
+						<a href="#" class="image left"><img src="{{ site.baseurl }}/assets/images/pic03.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>The Third Thing</h3>
+							<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+						</div>
+					</div>
+				</section>
+				<section class="6u">
+					<div class="box post">
+						<a href="#" class="image left"><img src="{{ site.baseurl }}/assets/images/pic04.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>The Fourth Thing</h3>
+							<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	
+	{% include cta.html %}
